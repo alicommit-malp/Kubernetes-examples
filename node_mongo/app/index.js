@@ -8,7 +8,7 @@ const PORT = 3000;
 
 // mongoose connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/conatctDb', {
+mongoose.connect('mongodb://'+ process.env.MONGO_HOST + ':' + process.env.MONGO_PORT  +'/conatctDb', {
     useMongoClient: true
 });
 

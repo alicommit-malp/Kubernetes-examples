@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-mongo-app-cluster-ip-service
+  labels:
+    app: node
+spec:
+  type: ClusterIP
+  selector:
+    app: node
+  ports:
+  - port: 3000
+    targetPort: 3000
+
